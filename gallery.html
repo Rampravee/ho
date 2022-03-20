@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <title>The Colour Festival</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+        body{
+            background: #ecf4fb;
+        }
+         .navbar{
+            width: 85%;
+            height: 15vh;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo{
+            margin-bottom: 10px;
+            margin-right: 15px;
+            width: 80px;
+            cursor: pointer;
+        }
+        .img-gallery{
+            width: 80%;
+            margin: 100px auto 50px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-gap: 30px;
+        }
+        .img-gallery img{
+            width: 100%;
+            cursor: pointer;
+        }
+        .img-gallery img:hover{
+            transform: scale(0.8) rotate(-15deg);
+            border-radius: 20px;
+            box-shadow: 0 32px 7px rgba(68, 77, 136, 0.2);
+        }
+        .full-img{
+            width: 100%;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.9);
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 100;
+        }
+        .full-img img{
+            width: 90%;
+            max-width: 500px;
+        }
+        .full-img span{
+            position: absolute;
+            top: 5%;
+            right: 5%;
+            font-size: 30px;
+            color: #fff;
+            cursor: pointer;
+        }
+        h1{
+            text-align: center;
+        }
+        .x{
+            color: #ff517f;
+        }
+        .n{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <img src="logo.png" class="logo">
+    </div>
+    <h1>Our <span class="x">4K Image</span>Holi Gallery</h1>
+    <h1>For <span class="x">Pc</span> And <span class="x">Android</span> Wallpapers</h1>
+    <div class="full-img" id="fullImgBox">
+        <img src="img1.jpg" id="fullImg">
+        <span onclick="closeFullImg()">X</span>
+    </div>
+    <div class="img-gallery">
+        <img src="https://wallpapershome.com/images/pages/pic_v/2028.jpg" alt="" onclick="openFullImg(this.src)">
+        <img src="https://www.teahub.io/photos/full/77-771157_holi-festival-of-colours-indian-holiday-spring-life.jpg" alt=""  onclick="openFullImg(this.src)">
+        <img src="https://wallpapercave.com/wp/wp5816954.jpg" alt=""  onclick="openFullImg(this.src)">
+        <img src="https://i.pinimg.com/originals/33/20/2f/33202f7cda3e523ebcf3788e54cbeb15.png" alt=""  onclick="openFullImg(this.src)">
+        <img src="https://i.pinimg.com/474x/67/26/3e/67263e2fa83869ba791bad66be4fbdc2.jpg" alt=""  onclick="openFullImg(this.src)">
+        <img src="https://pbs.twimg.com/media/DXQfebqV4AAQS6K.jpg" alt=""  onclick="openFullImg(this.src)">
+        <img src="https://www.teahub.io/photos/full/93-934791_holi-festival-of-colours-indian-holiday-spring-life.jpg" alt=""  onclick="openFullImg(this.src)">
+        <img src="https://i.pinimg.com/originals/09/eb/03/09eb031440b4d8c46f0a93cb866e53a4.jpg" alt=""  onclick="openFullImg(this.src)">
+        <img src="img9 (1).jpg" alt=""  onclick="openFullImg(this.src)">
+        <img src="img10 (2).jpg" alt=""  onclick="openFullImg(this.src)">
+    </div>
+</body>
+<script>
+    var fullImgBox = document.getElementById("fullImgBox");
+    var fullImg = document.getElementById("fullImg");
+
+    function openFullImg(pic){
+        fullImgBox.style.display = "flex";
+        fullImg.src = pic;
+    }
+
+    function closeFullImg(){
+        fullImgBox.style.display = "none";
+    }
+</script>
+</html>

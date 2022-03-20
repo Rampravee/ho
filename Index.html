@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <title>The Colour Festival</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+        .container{
+            width: 100%;
+            height: 100vh;
+            position: relative;
+        }
+        .navbar{
+            width: 85%;
+            height: 15vh;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo{
+            width: 80px;
+            cursor: pointer;
+        }
+        .menu-icon{
+            width: 30px;
+            cursor: pointer;
+        }
+        .row{
+            width: 85%;
+            height: 85vh;
+            margin: auto;
+            display: flex;
+            position: relative;
+        }
+        .left-col{
+            flex-basis: 45%;
+            height: 100%;
+            position: relative;
+        }
+        .content{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .content h1{
+            font-size: 45px;
+            line-height: 50px;
+            letter-spacing: 1px;
+            }
+            .content p{
+                color: #adadad;
+                font-size: 13px;
+                line-height: 18px;
+                margin: 20px 0;
+            }
+            .kkl{
+                color: #ff5174;
+            }
+            .arrow{
+                width: 40px;
+                height: 40px;
+                padding: 12px 0;
+                border: 1px solid #ff5174;
+                box-sizing: border-box;
+                border-radius: 75%;
+                align-items: center;
+                cursor: pointer;
+            }
+            .arrow img{
+                width: 30px;
+            }
+            .art{
+                width: 250px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+            }
+            .right-col{
+                flex-basis: 55%;
+            }
+            .picture{
+                height: 100%;
+                display: block;
+                margin: auto;
+            }
+            .controller{
+                position: absolute;
+                right: 20px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            .controller ul li{
+                list-style: none;
+                font-size: 12px;
+                color: #000;
+                font-weight: bold;
+                padding: 0 30px;
+                margin-bottom: 20px;
+                cursor: pointer;
+                line-height: 50px;
+            }
+            .controller ul li::after,
+            .controller .active::after{
+                content: '';
+                width: 2px;
+                height: 50px;
+                background: #ff5174;
+                position: absolute;
+                left: 0;
+            }
+            .controller ul li:hover{
+                background-color: #ff5174;
+            }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <img src="logo.png" class="logo">
+            <img src="menu-icon.png" class="menu-icon">
+        </div>
+        <div class="row">
+            <div class="left-col">
+                <div class="content">
+                    <h1><span class="kkl">Colors</span> are the <br> smile of nature <br> that's <span class="kkl">Holi</span></h1>
+                <p>In nature, light creates the colors. in the picture, <br>color creates the light.</p>
+                <div class="arrow">
+                   <a href="gallery.html"> <img src="arrow.png" alt=""></a>
+                </div>
+                <img src="art.png" class="art">
+                </div>
+            </div>
+            <div class="right-col">
+                <img src="pic1.png" class="picture" id="pic1">
+            </div>
+        </div>
+        <div class="controller">
+            <ul>
+                <li onmousedown="btn1()" id="btn1">01</li>
+                <li  onmousedown="btn2()" id="btn2">02</li>
+                <li  onmousedown="btn3()" class="btn3">03</li>
+                <li  onmousedown="btn4()" id="btn4">04</li>
+            </ul>
+        </div>
+    </div>
+    <script>
+         function btn1() {
+          document.getElementById("pic1").src ="https://images.unsplash.com/photo-1610313898425-a5c637a940db?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8aG9saXxlbnwwfHwwfHw%3D&w=1000&q=80"
+      }
+      function btn2() {
+          document.getElementById("pic1").src ="https://wallpapercave.com/wp/wp8603386.jpg"
+      }
+      function btn3() {
+          document.getElementById("pic1").src ="https://i.pinimg.com/564x/03/c0/a9/03c0a96356e2a1f4235c2c7c87866f70.jpg"
+      }
+      function btn4() {
+          document.getElementById("pic1").src ="https://images.pexels.com/photos/3679453/pexels-photo-3679453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+      }
+    </script>
+</body>
+</html>
